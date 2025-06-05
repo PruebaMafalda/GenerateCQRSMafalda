@@ -1,0 +1,14 @@
+C:\cursos\NetCoreConsola\GenerateCQRSMafalda\bin\Debug\net8.0\GenerateCQRSMafalda.exe
+C:\cursos\NetCoreConsola\GenerateCQRSMafalda\bin\Debug\net8.0\GenerateCQRSMafalda.deps.json
+C:\cursos\NetCoreConsola\GenerateCQRSMafalda\bin\Debug\net8.0\GenerateCQRSMafalda.runtimeconfig.json
+C:\cursos\NetCoreConsola\GenerateCQRSMafalda\bin\Debug\net8.0\GenerateCQRSMafalda.dll
+C:\cursos\NetCoreConsola\GenerateCQRSMafalda\bin\Debug\net8.0\GenerateCQRSMafalda.pdb
+C:\cursos\NetCoreConsola\GenerateCQRSMafalda\obj\Debug\net8.0\GenerateCQRSMafalda.GeneratedMSBuildEditorConfig.editorconfig
+C:\cursos\NetCoreConsola\GenerateCQRSMafalda\obj\Debug\net8.0\GenerateCQRSMafalda.AssemblyInfoInputs.cache
+C:\cursos\NetCoreConsola\GenerateCQRSMafalda\obj\Debug\net8.0\GenerateCQRSMafalda.AssemblyInfo.cs
+C:\cursos\NetCoreConsola\GenerateCQRSMafalda\obj\Debug\net8.0\GenerateCQRSMafalda.csproj.CoreCompileInputs.cache
+C:\cursos\NetCoreConsola\GenerateCQRSMafalda\obj\Debug\net8.0\GenerateCQRSMafalda.dll
+C:\cursos\NetCoreConsola\GenerateCQRSMafalda\obj\Debug\net8.0\refint\GenerateCQRSMafalda.dll
+C:\cursos\NetCoreConsola\GenerateCQRSMafalda\obj\Debug\net8.0\GenerateCQRSMafalda.pdb
+C:\cursos\NetCoreConsola\GenerateCQRSMafalda\obj\Debug\net8.0\GenerateCQRSMafalda.genruntimeconfig.cache
+C:\cursos\NetCoreConsola\GenerateCQRSMafalda\obj\Debug\net8.0\ref\GenerateCQRSMafalda.dll
