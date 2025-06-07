@@ -174,12 +174,12 @@ public class GenerateCreateCommandContent : GenerateBase
                 listRules.Add($"{_space}{_space}{_space}{_space}{_space}.WithMessage(localization.GetMessageRequired())");
             }else if (field.IsRequired && field.Type == FieldType.Int)
             {
-                if(field.IsNullable)
-                {
-                    listRules.Add($"{_space}{_space}{_space}{_space}.NotNull()");
-                    listRules.Add($"{_space}{_space}{_space}{_space}{_space}.WithErrorCode($\"{{(int)ApiErrorCode.REQUIRED_FIELD}}\")");
-                    listRules.Add($"{_space}{_space}{_space}{_space}{_space}.WithMessage(localization.GetMessageRequired())");
-                }
+                // if(field.IsNullable)
+                // {
+                listRules.Add($"{_space}{_space}{_space}{_space}.NotNull()");
+                listRules.Add($"{_space}{_space}{_space}{_space}{_space}.WithErrorCode($\"{{(int)ApiErrorCode.REQUIRED_FIELD}}\")");
+                listRules.Add($"{_space}{_space}{_space}{_space}{_space}.WithMessage(localization.GetMessageRequired())");
+                // }
                 listRules.Add($"{_space}{_space}{_space}{_space}.GreaterThan(0)");
                 listRules.Add($"{_space}{_space}{_space}{_space}{_space}.WithErrorCode($\"{{(int)ApiErrorCode.REQUIRED_FIELD}}\")");
                 listRules.Add($"{_space}{_space}{_space}{_space}{_space}.WithMessage(localization.GetMessageRequired())");

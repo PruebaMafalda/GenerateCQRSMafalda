@@ -30,7 +30,7 @@ public class GenerateBase
 
     public string GetCharNullable(EntityField field)
     {
-        return field.IsNullable && field.Type!= FieldType.String ? "?" : string.Empty;
+        return !field.IsRequired && !field.IsPrimaryKey ? "?" : string.Empty;
     }
     public string GetSummaryField(string description, int spaces)
     {
