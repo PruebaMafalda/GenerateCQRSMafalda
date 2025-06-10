@@ -31,8 +31,9 @@ public class GenerateAgregateModelEntityContent : GenerateBase
                 continue;
             }
             var charNullable = GetCharNullable(field);
+            var asignStringEmpty = GetAsignStringEmpty(field);
             // content += GetSummaryField(field.Description, 2);
-            content += $"{_space}{_space}public {field.TypeToString}{charNullable} {field.Name} {{ get; set; }}{_singlelb}";
+            content += $"{_space}{_space}public {field.TypeToString}{charNullable} {field.Name} {{ get; set; }}{asignStringEmpty}{_singlelb}";
             // content += $"{_singlelb}";
             if (field.IsForeignKey)
             {

@@ -23,8 +23,11 @@ public class Generate
         _generateApplication.Generate(model);
         // GENERATE TEST
         _generateTest.Generate(model);
-        // GENERATE TEST
-        _generatePostmanMain.Generate(model);
+        if (!model.GenerateOnlyModel)
+        {
+            // GENERATE Postman        
+            _generatePostmanMain.Generate(model);    
+        }
     }
 
 }

@@ -32,6 +32,10 @@ public class GenerateBase
     {
         return !field.IsRequired && !field.IsPrimaryKey ? "?" : string.Empty;
     }
+    public string GetAsignStringEmpty(EntityField field)
+    {
+        return field.IsRequired && field.Type == FieldType.String ? " = string.Empty;" : string.Empty;
+    }
     public string GetSummaryField(string description, int spaces)
     {
         //return string.Empty;

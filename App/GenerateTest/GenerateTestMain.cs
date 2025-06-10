@@ -11,21 +11,22 @@ public class GenerateTestMain
 
     public void Generate(GenerateParams model)
     {
-        if(!model.GenerateOnlyModel)
+        if (!model.GenerateOnlyModel)
         {
             // generate commands test
             GenerateCommandsTestFiles(model);
             // generate queries test
             GenerateQueriesTestFiles(model);
             // generate controller test
-            GenerateControllerTestFiles(model);
+            GenerateControllerTestFiles(model);            
+            // generate repository test
+            GenerateRepositoryTestFiles(model);
         }
         // generate domain agregate model test
         GenerateDomainAgregateModelTestFiles(model);
         // generate entity configuration test
         GenerateEntityConfigurationTestFiles(model);
-        // generate repository test
-        GenerateRepositoryTestFiles(model);
+        
     }
     public void GenerateCommandsTestFiles(GenerateParams model)
     {

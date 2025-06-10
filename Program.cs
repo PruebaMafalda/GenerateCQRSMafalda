@@ -19,7 +19,8 @@ class Program
         //var entity = ConfigGenerateProcesos.GetConfig(); // ConfigGenerateAgentes
         //var entity = ConfigGenerateEtapas.GetConfig(); // ConfigGenerateAgentes
         //var entity = ConfigGenerateEtapasRelaciones.GetConfig(); // ConfigGenerateAgentes
-        var entity = ConfigGenerateAlumnosInfo.GetConfig(); // ConfigGenerateAgentes
+        // var entity = ConfigGenerateAlumnosInfo.GetConfig(); // ConfigGenerateAgentes
+        var entity = ConfigGenerateOrigenesAtencion.GetConfig(); // ConfigGenerateAgentes
         generator.Execute(entity);
         Console.WriteLine(">>>>>>>>>>>>>>>> Finish Generate");
     }
