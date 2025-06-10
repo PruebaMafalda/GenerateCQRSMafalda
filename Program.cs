@@ -20,7 +20,11 @@ class Program
         //var entity = ConfigGenerateEtapas.GetConfig(); // ConfigGenerateAgentes
         //var entity = ConfigGenerateEtapasRelaciones.GetConfig(); // ConfigGenerateAgentes
         // var entity = ConfigGenerateAlumnosInfo.GetConfig(); // ConfigGenerateAgentes
-        var entity = ConfigGenerateOrigenesAtencion.GetConfig(); // ConfigGenerateAgentes
+        // var entity = ConfigGenerateOrigenesAtencion.GetConfig(); // ConfigGenerateAgentes
+        // var entity = ConfigGenerateFinalidades.GetConfig(); // ConfigGenerateAgentes
+        //var entity = ConfigGenerateFinalidadesGrupos.GetConfig(); // ConfigGenerateAgentes
+        //var entity = ConfigGenerateAcciones.GetConfig(); // ConfigGenerateAgentes
+        var entity = ConfigGenerateCasos.GetConfig(); // ConfigGenerateAgentes
         generator.Execute(entity);
         Console.WriteLine(">>>>>>>>>>>>>>>> Finish Generate");
     }

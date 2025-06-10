@@ -46,7 +46,7 @@ public class GenerateEntityConfigurationContent : GenerateBase
             {
                 fieldContent.Add($"{_space}{_space}{_space}{_space}.HasOne(a => a.{field.ForeignKeyObject})");
                 //fieldContent.Add($"{_space}{_space}{_space}{_space}.WithMany(b => b.{model.PluralName})");
-                fieldContent.Add($"{_space}{_space}{_space}{_space}.WithMany()");
+                fieldContent.Add($"{_space}{_space}{_space}{_space}.WithMany(e => e.{model.PluralName})");
                 fieldContent.Add($"{_space}{_space}{_space}{_space}.HasForeignKey(a => a.{field.Name})");
                 fieldContent.Add($"{_space}{_space}{_space}{_space}.HasPrincipalKey(p => p.Id)");
             }

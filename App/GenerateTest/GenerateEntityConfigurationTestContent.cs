@@ -39,7 +39,7 @@ public class GenerateEntityConfigurationTestContent : GenerateBase
             content += $"{_space}{_space}{_space}Assert.Equal(\"{pkField.Name}\", entityType.FindPrimaryKey().Properties[0].Name);{_singlelb}";
             content += $"{_space}{_singlelb}";    
         }
-        
+
         content += $"{_space}{_space}{_space}// Properties{_singlelb}";
         foreach (var field in model.Fields.Where(x => !x.IsForeignKey && !x.IsPrimaryKey))
         {   
@@ -67,7 +67,8 @@ public class GenerateEntityConfigurationTestContent : GenerateBase
             content += $"{_space}{_space}{_space}var {fkField.NameCamelCase}Navigation = entityType.FindNavigation(nameof({model.SingularName}.{fkField.ForeignKeyObject}));{_singlelb}";
             content += $"{_space}{_space}{_space}Assert.NotNull({fkField.NameCamelCase}Navigation);{_singlelb}";
             content += $"{_space}{_space}{_space}Assert.True({fkField.NameCamelCase}Navigation.IsCollection == false);{_singlelb}";
-            content += $"{_space}{_space}{_space}Assert.True({fkField.NameCamelCase}Navigation.ForeignKey.IsRequired);{_singlelb}";
+            var notRequired = !fkField.IsRequired ? "!" : string.Empty;
+            content += $"{_space}{_space}{_space}Assert.True({notRequired}{fkField.NameCamelCase}Navigation.ForeignKey.IsRequired);{_singlelb}";
         }
         content += $"{_space}{_space}}}{_singlelb}";
         content += $"{_space}}}{_singlelb}";
