@@ -39,7 +39,7 @@ public class GenerateAgregateModelEntityContent : GenerateBase
             {
                 // content += GetSummaryField(field.ForeignKeyObject, 2);
                 var fkEntity = !string.IsNullOrEmpty(field.ForeignKeyEntity) ? field.ForeignKeyEntity : field.ForeignKeyObject;
-                content += $"{_space}{_space}public {fkEntity} {field.ForeignKeyObject} {{ get; set; }}{_singlelb}";
+                content += $"{_space}{_space}public {fkEntity}? {field.ForeignKeyObject} {{ get; set; }}{_singlelb}";
                 // content += $"{_singlelb}";
             }
         }

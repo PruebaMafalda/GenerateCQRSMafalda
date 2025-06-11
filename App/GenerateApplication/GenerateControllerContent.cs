@@ -31,7 +31,7 @@ public class GenerateControllerContent : GenerateBase
         content += $"{_space}[Authorize(AuthenticationSchemes = OidcAuthenticationOptions.DEFAULT_SCHEME)]{_singlelb}";
         content += $"{_space}public class {model.PluralName}Controller : BaseController{_singlelb}";
         content += $"{_space}{{{_singlelb}";
-        content += $"{_space}{_space}/// <summary>Constructor.<summary>{_singlelb}";
+        content += $"{_space}{_space}/// <summary>Constructor.</summary>{_singlelb}";
         content += $"{_space}{_space}/// <param name=\"logger\">Logger.</param>{_singlelb}";
         content += $"{_space}{_space}public {model.PluralName}Controller(ILogger<{model.PluralName}Controller> logger) : base(logger){_singlelb}";
         content += $"{_space}{_space}{{{_singlelb}";
@@ -51,7 +51,7 @@ public class GenerateControllerContent : GenerateBase
             content += $"{_space}{_space}{{{_singlelb}";
             content += $"{_space}{_space}{_space}var response = await Mediator.Send(new Get{model.SingularName}ByIdQuery(id));{_doublelb}";
             content += $"{_space}{_space}{_space}if (response != null){_singlelb}";
-            content += $"{_space}{_space}{_space}{_space}return response.HasError() ? Ko(response) : Ok(response.Data[0]);{_doublelb}";
+            content += $"{_space}{_space}{_space}{_space}return response.HasError() ? Ko(response) : Ok(response.Data?[0]);{_doublelb}";
             content += $"{_space}{_space}{_space}return StatusCode((int)HttpStatusCode.InternalServerError);{_singlelb}";
             content += $"{_space}{_space}}}{_doublelb}";
         }
@@ -90,7 +90,7 @@ public class GenerateControllerContent : GenerateBase
             content += $"{_space}{_space}{_space}var response = await Mediator.Send(new Create{model.SingularName}Command({GetGenerateControllerParamsRequest(model)}));{_doublelb}";
             content += $"{_space}{_space}{_space}if (response == null){_singlelb}";
             content += $"{_space}{_space}{_space}{_space}return StatusCode((int)HttpStatusCode.InternalServerError);{_doublelb}";
-            content += $"{_space}{_space}{_space}return response.HasError() ? Ko(response) : StatusCode((int)HttpStatusCode.Created, response.Data[0]);{_singlelb}";
+            content += $"{_space}{_space}{_space}return response.HasError() ? Ko(response) : StatusCode((int)HttpStatusCode.Created, response.Data?[0]);{_singlelb}";
             content += $"{_space}{_space}}}{_doublelb}";
 
         }

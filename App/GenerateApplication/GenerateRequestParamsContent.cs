@@ -14,7 +14,8 @@ public class GenerateRequestParamsContent : GenerateBase
             if (field.IsPrimaryKey) continue;
             var charNullable = GetCharNullable(field);
             // content += GetSummaryField(field.Description, 2);
-            content += $"{_space}{_space}public {field.TypeToString}{charNullable} {field.Name} {{ get; set; }}{_singlelb}";
+            var asignStringEmpty = GetAsignStringEmpty(field);
+            content += $"{_space}{_space}public {field.TypeToString}{charNullable} {field.Name} {{ get; set; }}{asignStringEmpty}{_singlelb}";
             // content += $"{_singlelb}";
         }
         content += $"{_space}}}{_singlelb}";
@@ -33,7 +34,8 @@ public class GenerateRequestParamsContent : GenerateBase
             if (field.IsPrimaryKey) continue;
             var charNullable = GetCharNullable(field);
             // content += GetSummaryField(field.Description, 2);
-            content += $"{_space}{_space}public {field.TypeToString}{charNullable} {field.Name} {{ get; set; }}{_singlelb}";
+            var asignStringEmpty = GetAsignStringEmpty(field);
+            content += $"{_space}{_space}public {field.TypeToString}{charNullable} {field.Name} {{ get; set; }}{asignStringEmpty}{_singlelb}";
             // content += $"{_singlelb}";
         }
         content += $"{_space}}}{_singlelb}";

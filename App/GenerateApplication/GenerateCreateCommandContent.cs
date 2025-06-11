@@ -17,7 +17,8 @@ public class GenerateCreateCommandContent : GenerateBase
         {
             var charNullable = GetCharNullable(field);
             //content += GetSummaryField(field.Description, 2);
-            content += $"{_space}{_space}public {field.TypeToString}{charNullable} {field.Name} {{ get; set; }}{_singlelb}";
+            var asignStringEmpty = GetAsignStringEmpty(field);
+            content += $"{_space}{_space}public {field.TypeToString}{charNullable} {field.Name} {{ get; set; }}{asignStringEmpty}{_singlelb}";
             //content += $"{_singlelb}";
 
         }
@@ -88,6 +89,10 @@ public class GenerateCreateCommandContent : GenerateBase
         content += $"{_singlelb}";
         content += $"{_space}{_space}/// <summary>Constructor.</summary>{_singlelb}";
         content += $"{_space}{_space}/// <param name=\"{model.PluralNameCamelCase}Repository\">Repository of {model.PluralName}.</param>{_singlelb}";
+        if (!string.IsNullOrEmpty(localizationInjection))
+        { 
+            content += $"{_space}{_space}/// <param name=\"localization\">localization services.</param>{_singlelb}";
+        }
         content += $"{_space}{_space}public Create{model.SingularName}CommandHandler(I{model.PluralName}Repository {model.PluralNameCamelCase}Repository{localizationInjection}){_singlelb}";
         content += $"{_space}{_space}{{{_singlelb}";
         content += $"{_space}{_space}{_space}_{model.PluralNameCamelCase}Repository = {model.PluralNameCamelCase}Repository;{_singlelb}";

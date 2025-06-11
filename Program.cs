@@ -24,7 +24,11 @@ class Program
         // var entity = ConfigGenerateFinalidades.GetConfig(); // ConfigGenerateAgentes
         //var entity = ConfigGenerateFinalidadesGrupos.GetConfig(); // ConfigGenerateAgentes
         //var entity = ConfigGenerateAcciones.GetConfig(); // ConfigGenerateAgentes
-        var entity = ConfigGenerateCasos.GetConfig(); // ConfigGenerateAgentes
+        // var entity = ConfigGenerateCasos.GetConfig(); // ConfigGenerateAgentes
+        //var entity = ConfigGenerateCasosEtapas.GetConfig(); // ConfigGenerateAgentes
+        //var entity = ConfigGenerateCasosAgentes.GetConfig(); // ConfigGenerateAgentes
+        //var entity = ConfigGenerateCasosPedidos.GetConfig(); // ConfigGenerateAgentes
+        var entity = ConfigGenerateCasosLogs.GetConfig(); // ConfigGenerateAgentes
         generator.Execute(entity);
         Console.WriteLine(">>>>>>>>>>>>>>>> Finish Generate");
     }

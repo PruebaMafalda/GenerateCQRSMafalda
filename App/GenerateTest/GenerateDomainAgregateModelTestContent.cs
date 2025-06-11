@@ -15,7 +15,7 @@ public class GenerateDomainAgregateModelTestContent : GenerateBase
         content += $"{_space}{{{_singlelb}";
         content += $"{_space}{_space}[Theory(DisplayName = \"It should properly initialize the {model.SingularName} object\"), AutoMoq]{_singlelb}";
         content += $"{_space}{_space}public void {model.SingularName}_ShouldInitializeWithGivenParameters({_singlelb}";
-        foreach (var field in model.Fields)
+        foreach (var field in model.Fields.Where(e => !e.IsPrimaryKey))
         {
             content += $"{_space}{_space}{_space}{field.TypeToString} {field.NameCamelCase},{_singlelb}";
         }
