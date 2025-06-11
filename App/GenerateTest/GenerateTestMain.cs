@@ -19,9 +19,9 @@ public class GenerateTestMain
             GenerateQueriesTestFiles(model);
             // generate controller test
             GenerateControllerTestFiles(model);            
-            // generate repository test
-            GenerateRepositoryTestFiles(model);
         }
+        // generate repository test
+        GenerateRepositoryTestFiles(model);
         // generate domain agregate model test
         GenerateDomainAgregateModelTestFiles(model);
         // generate entity configuration test

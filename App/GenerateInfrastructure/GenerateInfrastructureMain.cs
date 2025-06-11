@@ -8,11 +8,7 @@ public class GenerateInfrastructureMain
     {
         // generate context entity configurations
         GenerateContextEntityConfigurationsFiles(model);
-        if (!model.GenerateOnlyModel)
-        { 
-            // generate repository
-            GenerateContextRepositoryFiles(model);
-        }
+        GenerateContextRepositoryFiles(model);
     }
     public void GenerateContextEntityConfigurationsFiles(GenerateParams model)
     {

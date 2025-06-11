@@ -10,10 +10,10 @@ public class GenerateDomainMain
     {
         // generate agregate model
         GenerateAgregateModelFiles(model);
-        if(!model.GenerateOnlyModel)
+        // generate Contracts
+        GenerateContractsRepositoryFiles(model);
+        if (!model.GenerateOnlyModel)
         {
-            // generate Contracts
-            GenerateContractsRepositoryFiles(model);
             // generate specifications
             GenerateSpecificationsFiles(model);
         }
