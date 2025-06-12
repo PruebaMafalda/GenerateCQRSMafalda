@@ -30,8 +30,8 @@ class Program
         //var entity = ConfigGenerateCasosPedidos.GetConfig(); 
         //var entity = ConfigGenerateCasosLogs.GetConfig(); 
         //var entity = ConfigGenerateTiposClasificaciones.GetConfig(); 
-        //var entity = ConfigGenerateClasificaciones.GetConfig(); 
-        //generator.Execute(entity);
+        var entity = ConfigGenerateClientesFinanciero.GetConfig(); 
+        generator.Execute(entity);
         Console.WriteLine($">>>>>>>>>>>>>>>> Finish Generate {DateTime.Now.ToString("yyyy-MM-dd HH:ii:ss")}");
     }
 }

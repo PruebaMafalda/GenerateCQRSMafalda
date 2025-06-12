@@ -159,7 +159,7 @@ public class GenerateApplicationMain
     }
     public void GenerateAppContextGetByFilterQueriesFiles(GenerateParams model)
     {
-        var pathCreateQuery = Path.Combine(PathApplication.ApplicationAppContext.FullPath, model.PluralName, "Queries", $"Get{model.SingularName}ByFilterss");
+        var pathCreateQuery = Path.Combine(PathApplication.ApplicationAppContext.FullPath, model.PluralName, "Queries", $"Get{model.SingularName}ByFilter");
         // Generate GetByFilter Query DTO
         ProjectFile.CreateFile(new CreateFileParams
         {
